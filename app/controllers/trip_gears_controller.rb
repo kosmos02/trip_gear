@@ -5,7 +5,7 @@ class TripGearsController < ApplicationController
         if trip_gear.valid?
             render json: trip_gear, status: :created
         else
-            render json: {message: trip+gear.erros.full_messages[0]}, status: :unprocessable_entity
+            render json: {message: trip_gear.erros.full_messages[0]}, status: :unprocessable_entity
         end
     
     end
