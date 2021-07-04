@@ -8,7 +8,7 @@ class TripsController < ApplicationController
     def create
         trip = Trip.create(trip_params)
         if trip.valid?
-            render json: trip, include: {:gears => {only: :name}} status: :created
+            render json: trip, include: {:good_gear => {only: :status}} status: :created
         else
             render json: {message: 'somethign went wrong'}, status: :unprocessable entity
     end
