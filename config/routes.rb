@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :trip_gears, only: :create
-  resources :trips, only: [:index, :create]
+  resources :trips, only: %i[index create]
   resources :user_gears, only: [:create]
   resources :gears, only: [:index, :destroy]
   resources :users, only: [:create, :index, :destroy]
